@@ -137,14 +137,15 @@ ul {
     width: 100%; }
   .popup__search .icon {
     color: #4f5b66;
+    font-size: 1.2em;
+    left: 15px;
     margin-left: 17px;
     margin-top: 17px;
     position: absolute;
-    left: 15px;
-    top: 9px;
+    top: 6px;
     z-index: 1; }
 
-.search--focused .icon {
+.popup__search__bar--focused .icon {
   color: blue; }
 
 .popup__footer {
@@ -233,7 +234,7 @@ body {
   background: blue; }
 
 .circle-icon--green {
-  background: #57c678; }
+  background: #38ab63; }
 
 .circle-icon--gray {
   background: gray; }
