@@ -1,4 +1,4 @@
-var popupInputsEvents = (function() {
+var inputsEvents = (function() {
   function load($container) {
     $container.on('focusin', '#search-bar', function() {
       $(this).closest('.popup__search').addClass('search--focused');
