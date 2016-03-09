@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.button--popup--close--small {
+.button__popup--close--small {
   color: black;
   font-size: 1.1em;
   font-weight: bold;
@@ -14,5 +14,20 @@
   &:hover {
     color: gray;
     cursor: pointer;
+  }
+}
+
+.button__popup--clear {
+  color: #4f5b66;
+  font-size: 1.2em;
+  margin-left: 0;
+  margin-top: 17px;
+  position: absolute;
+  right: 30px;
+  top: 9px;
+  z-index: 1;
+
+  &:hover {
+    color: black;
   }
 }
