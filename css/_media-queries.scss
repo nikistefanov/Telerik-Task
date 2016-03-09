@@ -1,6 +1,6 @@
 @media (min-width: 800px) and (max-width: 1024px) {
   .container {
-    .popup {
+    .popup__window {
       width: 60%;
     }
   }
@@ -8,7 +8,7 @@
 
 @media (min-width: 480px) and (max-width: 799px) {
   .container {
-    .popup {
+    .popup__window {
       font-size: 0.9em;
       width: 70%;
     }
@@ -16,14 +16,11 @@
 }
 @media (min-width: 320px) and (max-width: 479px) {
   .container {
-    .popup {
+    .popup__window {
       font-size: 0.9em;
       width: 90%;
       .selected-products {
         .selected-product__content {
-          .fa:not(.button--remove--content) {
-            top: -5px;
-          }
           .selected-product__text {
             padding-left: 2px;
           }

@@ -12,19 +12,23 @@
     }
 
     .fa {
+      display: inline-block;
+      float: left;
       position: relative;
-      top: -10px;
+      top: 5px;
     }
 
     .selected-product__text {
       display: inline-block;
       margin: 0;
       padding-left: 10px;
+      width: 80%;
 
       .selected-product__title {
         display: block;
         float: left;
         width: 100%;
+        word-wrap: break-word;
       }
 
       .selected-product__description {

@@ -17,18 +17,18 @@ var popupWindowEvents = (function() {
       }
 
       $(this).hide();
-      $('#popup-window').show();
+      $('#popup').show();
       $('.' + currentActivePage + '').show();
     });
 
     $container.on('click', '.button-popup-close', function() {
-      $('#popup-window').hide();
+      $('#popup').hide();
       $('#button-popup-open').show();
     });
 
-    $container.on('click', '#popup-window', function(ev) {
-      if (ev.target.id == 'popup-window') {
-        $('#popup-window').hide();
+    $container.on('click', '#popup', function(ev) {
+      if (ev.target.id == 'popup') {
+        $('#popup').hide();
         $('#button-popup-open').show();
       }
     });

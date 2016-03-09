@@ -5,7 +5,7 @@
 @import 'components/popup-search';
 @import 'components/popup-footer';
 
-.popup__window {
+.popup {
   background: $blured-background-color;
   left: 0;
   position: absolute;;
@@ -13,7 +13,7 @@
   top: 0;
 }
 
-.popup {
+.popup__window {
   background: white;
   margin: 70px auto;
   position: relative;
