@@ -1,20 +1,20 @@
 var templates = (function() {
-  function load(name) {
-    var url = 'templates/' + name + '.handlebars';
+  function load(name, $container, addingOption) {
+    $.get('templates/' + name + '.html', function(html) {
+      switch (addingOption) {
+        case 'html':
+          $container.html(html);
+          break;
+        case 'append':
+          $container.append(html);
+          break;
+        default: console.error('Can\'t load this template.');
 
-    return new Promise(function(resolve, reject) {
-      $.ajax({
-        url: url,
-        success: function(data) {
-          resolve(data);
-        },
-        error: function(err) {
-          reject(err);
-        }
-      });
+      }
     });
   }
+
   return {
     load: load
   };
-})();
+}());

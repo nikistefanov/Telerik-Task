@@ -7,12 +7,12 @@ var popupWindowEvents = (function() {
         $popupMainContent = $('#popup-main'),
         allPages = 'all-pages',
         selectedPages = 'selected-pages',
-        templatesLoadOption = 'append';
+        addingOption = 'append';
 
       if (!isDataLoaded) {
         $loader.hide();
-        data.load(allPages);
-        data.load(selectedPages);
+        templates.load(allPages, $popupMainContent, addingOption);
+        templates.load(selectedPages, $popupMainContent, addingOption);
         isDataLoaded = true;
       }
 

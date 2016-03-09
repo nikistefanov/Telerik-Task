@@ -1,13 +1,12 @@
 (function() {
   var $container = $('#wrapper'),
-    $loader = $('.loading');
+    $loader = $('.loading'),
+    templateName = 'popup',
+    addingOption = 'html';
 
-
-  $.get('templates/popup.html', function(data) {
-    $container.html(data);
+    templates.load(templateName, $container, addingOption);
     $loader.hide();
     $(document).ready(function() {
       eventLoader.loadAllEvents($container);
     });
-  });
 }());
