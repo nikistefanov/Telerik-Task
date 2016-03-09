@@ -10,18 +10,20 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha', 'chai', 'sinon', 'sinon-chai'],
 
 
     // list of files / patterns to load in the browser
     files: [
 	  'bower_components/jquery/dist/jquery.js',
 	  'node_modules/chai-jquery/chai-jquery.js',
+	  'node_modules/sinon/pkg/sinon-1.17.3.js',
+	  'node_modules/sinon-chai/lib/sinon-chai.js',
 	  'js/templates.js',
 	  'js/sum.js',
       'tests/sum.tests.js',
-	  'js/app.js',
-      'tests/app.tests.js'
+	  'js/**/*.js',
+      'tests/*.js'
     ],
 
 

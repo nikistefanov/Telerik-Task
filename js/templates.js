@@ -8,8 +8,7 @@ var templates = (function() {
         case 'append':
           $container.append(html);
           break;
-        default: console.error('Can\'t load this template.');
-
+        default: console.error('Can\'t load ' + name + ' template.');
       }
     });
   }

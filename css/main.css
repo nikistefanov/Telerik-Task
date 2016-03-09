@@ -170,13 +170,15 @@ ul {
   left: 0;
   position: absolute;
   right: 0;
-  top: 0; }
+  top: 0;
+  z-index: 100; }
 
 .popup__window {
   background: white;
   margin: 70px auto;
   position: relative;
-  width: 50%; }
+  width: 50%;
+  z-index: 200; }
 
 body {
   font-family: "Open Sans Regular", "Open Sans", serif;
