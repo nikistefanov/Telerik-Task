@@ -62,8 +62,10 @@ ul {
     .popup__header .menu .menu__item .menu__item__text:hover {
       color: black;
       cursor: pointer; }
-    .popup__header .menu .menu__item .menu__item__badge:hover {
-      cursor: pointer; }
+    .popup__header .menu .menu__item .menu__item__badge {
+      display: inline-block; }
+      .popup__header .menu .menu__item .menu__item__badge:hover {
+        cursor: pointer; }
   .popup__header .menu .menu__item--active {
     border-bottom: 2px solid gray;
     color: black; }
@@ -196,9 +198,6 @@ body {
 
 .hidden {
   display: none; }
-
-.menu__item__badge {
-  display: inline-block; }
 
 .button {
   border: 0;

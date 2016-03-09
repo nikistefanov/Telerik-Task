@@ -20,14 +20,15 @@
           cursor: pointer;
         }
       }
-
+      
       .menu__item__badge {
+        display: inline-block;
         &:hover {
           cursor: pointer;
         }
       }
     }
-    
+
     .menu__item--active {
       border-bottom: 2px solid gray;
       color: black;
