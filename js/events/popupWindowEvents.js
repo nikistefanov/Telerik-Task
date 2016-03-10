@@ -1,23 +1,30 @@
 var popupWindowEvents = (function() {
   var isDataLoaded = false;
+
   function load($container) {
     $container.on('click', '#button-popup-open', function() {
       var currentActivePage = $('.menu__item--active').attr('id'),
         $loader = $('.loading'),
+        $popup = $('#popup'),
         $popupMainContent = $('#popup-main'),
         allPages = 'all-pages',
-        selectedPages = 'selected-pages',
-        addingOption = 'append';
+        selectedPages = 'selected-pages';
 
       if (!isDataLoaded) {
         $loader.hide();
-        templates.load(allPages, $popupMainContent, addingOption);
-        templates.load(selectedPages, $popupMainContent, addingOption);
+        template.load(allPages)
+          .then(function(templateHtml) {
+            $popupMainContent.append(templateHtml);
+          });
+        template.load(selectedPages)
+          .then(function(templateHtml) {
+            $popupMainContent.append(templateHtml);
+          });
         isDataLoaded = true;
       }
 
       $(this).hide();
-      $('#popup').show();
+      $popup.show();
       $('.' + currentActivePage + '').show();
     });
 
