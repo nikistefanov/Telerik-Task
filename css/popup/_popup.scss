@@ -1,9 +1,9 @@
-@import 'variables';
-@import 'components/popup-button';
-@import 'components/popup-header';
-@import 'components/popup-main';
-@import 'components/popup-search';
-@import 'components/popup-footer';
+@import 'components/variables';
+@import 'popup-components/popup-button';
+@import 'popup-components/popup-header';
+@import 'popup-components/popup-main';
+@import 'popup-components/popup-search';
+@import 'popup-components/popup-footer';
 
 .popup {
   background: $blured-background-color;
