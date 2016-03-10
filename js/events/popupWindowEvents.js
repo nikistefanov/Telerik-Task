@@ -2,6 +2,9 @@ var popupWindowEvents = (function() {
   var isDataLoaded = false;
 
   function load($container) {
+    var productItem = new ProductItem($container),
+      selectedProductItem = new SelectedProductItem($container);
+
     $container.on('click', '#button-popup-open', function() {
       var currentActivePage = $('.menu__item--active').attr('id'),
         $loader = $('.loading'),
@@ -9,17 +12,13 @@ var popupWindowEvents = (function() {
         $popupMainContent = $('#popup-main'),
         allPages = 'all-pages',
         selectedPages = 'selected-pages';
-
+        
       if (!isDataLoaded) {
         $loader.hide();
-        template.load(allPages)
-          .then(function(templateHtml) {
-            $popupMainContent.append(templateHtml);
-          });
-        template.load(selectedPages)
-          .then(function(templateHtml) {
-            $popupMainContent.append(templateHtml);
-          });
+
+        productItem.setItems(allPages , $popupMainContent);
+        selectedProductItem.setItems(selectedPages, $popupMainContent);
+
         isDataLoaded = true;
       }
 

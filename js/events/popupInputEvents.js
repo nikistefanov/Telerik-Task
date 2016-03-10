@@ -10,16 +10,16 @@ var popupInputEvents = (function() {
       $('#popup-button-clear').hide();
     });
 
-    $container.on('click', '.popup__checkbox', function() {
-      var classToAddOrRemove = 'product__item__content--selected',
-        elementNeedingTheClass = '.product__item__content';
-
-      if ($(this).closest(elementNeedingTheClass).hasClass(classToAddOrRemove)) {
-        $(this).closest(elementNeedingTheClass).removeClass(classToAddOrRemove);
-      } else {
-        $(this).closest(elementNeedingTheClass).addClass(classToAddOrRemove);
-      }
-    });
+    // $container.on('click', '.popup__checkbox', function() {
+    //   var classToAddOrRemove = 'product__item__content--selected',
+    //     elementNeedingTheClass = '.product__item__content';
+    //
+    //   if ($(this).closest(elementNeedingTheClass).hasClass(classToAddOrRemove)) {
+    //     $(this).closest(elementNeedingTheClass).removeClass(classToAddOrRemove);
+    //   } else {
+    //     $(this).closest(elementNeedingTheClass).addClass(classToAddOrRemove);
+    //   }
+    // });
   }
   return {
     load: load
