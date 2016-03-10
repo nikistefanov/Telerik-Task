@@ -13,11 +13,11 @@ ul {
     width: 60%; } }
 @media (min-width: 480px) and (max-width: 799px) {
   .container .popup__window {
-    font-size: 0.9em;
+    font-size: .9em;
     width: 70%; } }
 @media (min-width: 320px) and (max-width: 479px) {
   .container .popup__window {
-    font-size: 0.9em;
+    font-size: .9em;
     width: 90%; }
     .container .popup__window .selected-products .selected-product__content .selected-product__text {
       padding-left: 2px; } }
@@ -143,7 +143,7 @@ ul {
     border-bottom: 1px solid gray; }
   .products .product__item .product__text {
     padding-left: 20px; }
-.products .product__item--editable:last-of-type {
+.products .product__item--editable .product__item:last-of-type {
   border-bottom: 0; }
 .products .product__item--editable .product__text {
   padding-left: 0; }

@@ -31,9 +31,10 @@
   }
 
   .product__item--editable {
-    &:last-of-type {
+    .product__item:last-of-type {
       border-bottom: 0;
     }
+
     .product__text {
       padding-left: 0;
     }
