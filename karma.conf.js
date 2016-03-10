@@ -20,7 +20,7 @@ module.exports = function(config) {
 	  'node_modules/sinon/pkg/sinon-1.17.3.js',
 	  'node_modules/sinon-chai/lib/sinon-chai.js',
 	  'js/template.js',
-	  'js/data.js',
+	  'js/product.js',
 	  'js/**/*.js',
       'tests/*.js'
     ],

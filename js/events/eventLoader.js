@@ -1,6 +1,6 @@
 var eventLoader = (function() {
   function loadAllEvents($container) {
-    popupInputEvents.load($container);
+    popupSearchEvents.load($container);
     popupWindowEvents.load($container);
     popupDataPagesEvents.load($container);
   }
