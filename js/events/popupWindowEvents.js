@@ -1,5 +1,6 @@
 var popupWindowEvents = (function() {
-  var isDataLoaded = false;
+  var $mainContent = $('.main-content'),
+    isDataLoaded = false;
 
   function load($container) {
     var mainProduct = new MainProduct($container),
@@ -23,18 +24,21 @@ var popupWindowEvents = (function() {
       }
 
       $(this).hide();
+      $mainContent.hide();
       $popup.show();
       $('.' + currentActivePage + '').show();
     });
 
     $container.on('click', '.button-popup-close', function() {
       $('#popup').hide();
+      $mainContent.show();
       $('#button-popup-open').show();
     });
 
     $container.on('click', '#popup', function(ev) {
       if (ev.target.id == 'popup') {
         $('#popup').hide();
+        $mainContent.show();
         $('#button-popup-open').show();
       }
     });
