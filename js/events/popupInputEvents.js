@@ -12,12 +12,12 @@ var popupInputEvents = (function() {
 
     $container.on('click', '.popup__checkbox', function() {
       var classToAddOrRemove = 'product__item__content--selected',
-        closestElementNeedingTheClass = '.product__item__content';
+        elementNeedingTheClass = '.product__item__content';
 
-      if ($(this).closest(closestElementNeedingTheClass).hasClass(classToAddOrRemove)) {
-        $(this).closest(closestElementNeedingTheClass).removeClass(classToAddOrRemove);
+      if ($(this).closest(elementNeedingTheClass).hasClass(classToAddOrRemove)) {
+        $(this).closest(elementNeedingTheClass).removeClass(classToAddOrRemove);
       } else {
-        $(this).closest(closestElementNeedingTheClass).addClass(classToAddOrRemove);
+        $(this).closest(elementNeedingTheClass).addClass(classToAddOrRemove);
       }
     });
   }

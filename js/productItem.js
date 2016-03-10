@@ -1,25 +1,31 @@
-var productItem = function(el) {
-  this.el = $(el);
-  this.el.on('click', '.popup__checkbox', _.bind(this._handleClick, this));
-};
+var productItem = (function() {
+  function ProductItem(el) {
+    this.el = $(el);
+    this._bindEvents();
+  }
 
-productItem.prototype.setResults = function(results) {
-  // var templateRequest = $.get('people-detailed.tmpl');
-  // templateRequest.then( _.bind(this._populate, this, results) );
-  template.load('all-pages')
-    .then(function(templateHtml) {
-      $popupMainContent.append(templateHtml);
-    });
-};
+  // productItem.prototype.setResults = function(templateHtml) {
+  //   template.load(templateHtml)
+  //     .then(function(html) {
+  //       $popupMainContent.append(html);
+  //     });
+  // };
 
-productItem.prototype._handleClick = function(evt) {
-  var name = $(evt.target).closest('li.result').attr('data-name');
-  $(document).trigger('like', [name]);
-};
+  productItem.prototype._bindEvents = function() {
+   this.el.on( 'click', '.popup__checkbox', _.bind( this._handleClick, this ) );
+ };
 
-productItem.prototype._populate = function(results, tmpl) {
-  var html = _.template(tmpl, {
-    people: results
-  });
-  this.el.html(html);
-};
+  productItem.prototype._handleClick = function(ev) {
+    var classToAddOrRemove = 'product__item__content--selected',
+      elementNeedingTheClass = '.product__item__content';
+    var $target = $(ev.target).closest(closestElementNeedingTheClass);
+
+    if (($target).closest(elementNeedingTheClass).hasClass(classToAddOrRemove)) {
+      $target.closest(elementNeedingTheClass).removeClass(classToAddOrRemove);
+    } else {
+      $target.closest(elementNeedingTheClass).addClass(classToAddOrRemove);
+    }
+  };
+
+  return ProductItem;
+}());
