@@ -21,6 +21,12 @@ ul {
     width: 90%; }
     .container .popup__window .selected-products .selected-product__content .selected-product__text {
       padding-left: 2px; } }
+@media (max-width: 319px) {
+  .container .popup__window {
+    font-size: .8em;
+    width: 90%; }
+    .container .popup__window .selected-products .selected-product__content .selected-product__text {
+      padding-left: 1px; } }
 .circle-icon {
   background: black;
   border-radius: 25px;

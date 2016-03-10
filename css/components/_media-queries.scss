@@ -30,3 +30,20 @@
     }
   }
 }
+
+@media (max-width: 319px) {
+  .container {
+    .popup__window {
+      font-size: .8em;
+      width: 90%;
+
+      .selected-products {
+        .selected-product__content {
+          .selected-product__text {
+            padding-left: 1px;
+          }
+        }
+      }
+    }
+  }
+}
