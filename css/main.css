@@ -90,15 +90,15 @@ ul {
   font-size: 1.1em;
   font-weight: bold;
   position: absolute;
-  right: 30px;
+  right: 15px;
   text-decoration: none;
-  top: 30px; }
+  top: 15px; }
   .button__popup--close--small:hover {
     color: gray;
     cursor: pointer; }
 
 .button__popup--clear {
-  color: #4f5b66;
+  color: gray;
   font-size: 1.2em;
   margin-left: 0;
   margin-top: 17px;
@@ -120,9 +120,12 @@ ul {
     display: inline-block;
     margin-right: 15px;
     padding-bottom: 5px; }
-    .popup__header .menu .menu__item .menu__item__text:hover {
-      color: black;
-      cursor: pointer; }
+    .popup__header .menu .menu__item .menu__item__text {
+      display: inline-block;
+      height: 22px; }
+      .popup__header .menu .menu__item .menu__item__text:hover {
+        color: black;
+        cursor: pointer; }
     .popup__header .menu .menu__item .menu__item__badge {
       display: inline-block; }
       .popup__header .menu .menu__item .menu__item__badge:hover {
@@ -204,14 +207,14 @@ ul {
   position: relative; }
   .popup__search .popup__search__bar {
     border: 1px solid gray;
-    color: gray;
+    color: #d2c8c8;
     float: left;
     font-size: 1.1em;
     height: 35px;
     padding-left: 35px;
     width: 100%; }
   .popup__search .icon {
-    color: #4f5b66;
+    color: #d2c8c8;
     font-size: 1.2em;
     left: 10px;
     margin-left: 17px;
@@ -221,7 +224,7 @@ ul {
     z-index: 1; }
 
 .popup__search__bar--focused .icon {
-  color: blue; }
+  color: #1d31e5; }
 
 .popup__footer {
   padding: 20px; }

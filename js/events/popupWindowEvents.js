@@ -14,10 +14,11 @@ var popupWindowEvents = (function() {
         allPages = 'all-pages',
         selectedPages = 'selected-pages';
 
+
       if (!isDataLoaded) {
         $loader.hide();
 
-        mainProduct.setItems(allPages , $popupMainContent);
+        mainProduct.setItems(allPages, $popupMainContent);
         selectedProduct.setItems(selectedPages, $popupMainContent);
 
         isDataLoaded = true;
@@ -44,6 +45,6 @@ var popupWindowEvents = (function() {
     });
   }
   return {
-    load: load
+    load: load,
   };
 })();

@@ -4,7 +4,7 @@
 
   .popup__search__bar {
     border: 1px solid gray;
-    color: gray;
+    color: $search-bar-icon-and-text-color;
     float: left;
     font-size: 1.1em;
     height: 35px;
@@ -13,7 +13,7 @@
   }
 
   .icon {
-    color: #4f5b66;
+    color: $search-bar-icon-and-text-color;
     font-size: 1.2em;
     left: 10px;
     margin-left: 17px;
@@ -26,6 +26,6 @@
 
 .popup__search__bar--focused {
   .icon {
-    color: blue;
+    color: $search-bar-icon-focused-color;
   }
 }
